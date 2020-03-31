@@ -8,7 +8,7 @@
     "128": "icon-128.png"
   },
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs", "https://facebook.com/*", "https://*.facebook.com/*"
   ],
   "browser_action": {
     "default_title": "Extract Facebook Group Answers",
@@ -18,7 +18,7 @@
   "background": { "scripts": ["hot-reload.js"] },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://*.facebook.com/*", "https://facebook.com/*"],
       "js": ["jquery-3.4.1.min.js", "content.js"]
     }
   ],

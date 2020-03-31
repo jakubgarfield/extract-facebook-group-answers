@@ -33,7 +33,6 @@ function formatResponse(response) {
 $(function() {
   chrome.tabs.getSelected(null, function(tab) {
     chrome.tabs.sendMessage(tab.id, { action: "extractFacebookGroupAnswers" }, function(response) {
-      console.log(response);
       if (response.members.length > 0) {
         copyToClipboard(formatResponse(response));
         $("#result").html(`<h3>Yay!</h3><p>${response.members.length} members with answers found and copied to clipboard.</p><p>Paste data into Google Sheets or Excel.</p>`);
