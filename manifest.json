@@ -1,0 +1,26 @@
+{
+  "name": "Extract Facebook Group Answers",
+  "description": "Extracts answers from Facebook Group before users are approved to join.",
+  "version": "0.0.2",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "Extract Facebook Group Answers",
+    "default_icon": "icon-16.png",
+    "default_popup": "popup.html"
+  },
+  "background": { "scripts": ["hot-reload.js"] },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.4.1.min.js", "content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
