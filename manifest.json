@@ -1,7 +1,7 @@
 {
   "name": "Extract Facebook Group Answers",
   "description": "Extracts answers from Facebook Group before users are approved to join.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icons": {
     "16": "icon-16.png",
     "48": "icon-48.png",
